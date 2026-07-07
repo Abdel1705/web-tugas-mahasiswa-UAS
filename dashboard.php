@@ -25,8 +25,8 @@ include 'koneksi.php';
                     <a href="#">Data Master ▾</a>
                     <div class="dropdown-css">
                         <a href="tugas.php">Data Tugas</a>
-                        <a href="#">Data Mahasiswa</a>
-                        <a href="#">Data User</a>
+                        <a href="Data_mahasiswa.php">Data_Mahasiswa</a>
+                        <a href="user.php">Data User</a>
                     </div>
                 </li>
 
