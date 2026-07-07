@@ -260,6 +260,3 @@ function logout() {
 
 </body>
 </html>
-
-</body>
-</html>
