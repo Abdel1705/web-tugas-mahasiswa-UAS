@@ -1,3 +1,6 @@
+<?php
+include 'koneksi.php';
+?>
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -22,8 +25,8 @@
                     <a href="#">Data Master ▾</a>
                     <div class="dropdown-css">
                         <a href="tugas.php">Data Tugas</a>
-                        <a href="#">Data Mahasiswa</a>
-                        <a href="#">Data User</a>
+                        <a href="Data_mahasiswa.php">DataMahasiswa</a>
+                        <a href="user.php">Data User</a>
                     </div>
                 </li>
 
@@ -35,7 +38,7 @@
                     </div>
                 </li>
 
-                <li><a href="#" onclick="logout()">Logout</a></li>
+              <li><a href="#" onclick="logout()">Logout</a></li>  
             </ul>
         </div>
     </header>
