@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | Sistem Manajemen Tugas Mahasiswa Ayam</title>
+    <title>Login Sistem Manajemen Tugas Mahasiswa</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
@@ -14,7 +14,7 @@
         <div class="card login-card p-4 p-md-5">
             <div class="text-center mb-4">
                 <div class="logo-box mx-auto mb-3">TM</div>
-                <h3 class="fw-bold mb-1">Sistem Manajemen Tugas</h3>
+                <h3 class="fw-bold mb-1">Sistem Manajemen Tugas Mahasiswa</h3>
                 <p class="text-secondary mb-0">Silakan login untuk masuk ke dashboard</p>
             </div>
 

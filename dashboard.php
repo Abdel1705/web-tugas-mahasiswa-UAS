@@ -234,11 +234,6 @@
     </main>
 
     <footer class="py-4">
-        <div class="container text-center footer-text">
-            Sistem Manajemen Tugas Mahasiswa
-        </div>
-    </footer>
-    <footer class="py-4">
     <div class="container text-center footer-text">
         Sistem Manajemen Tugas Mahasiswa
     </div>
