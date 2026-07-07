@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 01, 2026 at 05:28 AM
+-- Generation Time: Jul 07, 2026 at 12:01 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -46,7 +46,8 @@ CREATE TABLE `mahasiswa` (
 INSERT INTO `mahasiswa` (`id_mahasiswa`, `nim`, `nama_mahasiswa`, `prodi`, `kelas`, `email`, `no_hp`, `status`, `created_at`) VALUES
 (1, '230101001', 'Ahmad Fauzan', 'Pendidikan Teknologi Informasi', 'Unit 01', 'ahmad@example.com', '081234567890', 'aktif', '2026-07-01 02:21:02'),
 (2, '230101002', 'Siti Rahmah', 'Pendidikan Teknologi Informasi', 'Unit 01', 'siti@example.com', '081234567891', 'aktif', '2026-07-01 02:21:02'),
-(3, '230101003', 'Muhammad Rizki', 'Pendidikan Teknologi Informasi', 'Unit 02', 'rizki@example.com', '081234567892', 'aktif', '2026-07-01 02:21:02');
+(3, '230101003', 'Muhammad Rizki', 'Pendidikan Teknologi Informasi', 'Unit 02', 'rizki@example.com', '081234567892', 'aktif', '2026-07-01 02:21:02'),
+(6, '250212030', 'Nadya Adelya', 'Pendidikan Teknologi Informasi ', 'Unit 02', 'na@gmail', '081234567890', 'aktif', '2026-07-07 05:27:44');
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,7 @@ CREATE TABLE `tugas` (
   `status_tugas` enum('draft','aktif','selesai') DEFAULT 'aktif',
   `id_user` int(11) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
-) ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `tugas`
@@ -196,19 +197,19 @@ ALTER TABLE `user_login`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `pengumpulan_tugas`
 --
 ALTER TABLE `pengumpulan_tugas`
-  MODIFY `id_pengumpulan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_pengumpulan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tugas`
 --
 ALTER TABLE `tugas`
-  MODIFY `id_tugas` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_tugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `user_login`
