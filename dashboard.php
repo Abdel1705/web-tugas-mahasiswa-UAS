@@ -35,7 +35,7 @@
                     </div>
                 </li>
 
-                <li><a href="#" onclick="logout()">Logout</a></li>
+              <li><a href="#" onclick="logout()">Logout</a></li>  
             </ul>
         </div>
     </header>
