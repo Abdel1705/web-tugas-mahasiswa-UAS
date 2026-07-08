@@ -580,3 +580,30 @@ body {
             padding:6px 12px;
             border-radius:20px;
         }
+         body{
+            background:#f5f7fb;
+        }
+
+        .page-title{
+            font-size:28px;
+            font-weight:700;
+            color:#1e3a8a;
+        }
+
+        .card-custom{
+            border:none;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,.08);
+        }
+
+        .table thead{
+            background:#2563eb;
+            color:white;
+        }
+
+        .badge-status{
+            background:#22c55e;
+            color:white;
+            padding:6px 12px;
+            border-radius:20px;
+        }
