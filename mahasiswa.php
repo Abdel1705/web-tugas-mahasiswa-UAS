@@ -1,3 +1,9 @@
+<?php
+include 'koneksi.php';
+
+$data = mysqli_query($conn, "SELECT * FROM mahasiswa");
+?>
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -6,116 +12,184 @@
     <title>Data Mahasiswa</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="assets/css/style.css" rel="stylesheet">
+
+    <style>
+
+        body{
+            background:#f5f7fb;
+        }
+
+        .page-title{
+            font-size:28px;
+            font-weight:700;
+            color:#1e3a8a;
+        }
+
+        .card-custom{
+            border:none;
+            border-radius:20px;
+            box-shadow:0 10px 25px rgba(0,0,0,.08);
+        }
+
+        .btn-primary{
+            border-radius:12px;
+        }
+
+        .table thead{
+            background:#2563eb;
+            color:white;
+        }
+
+        .table th{
+            text-align:center;
+        }
+
+        .table td{
+            vertical-align:middle;
+        }
+
+        .badge-status{
+            background:#22c55e;
+            color:white;
+            padding:6px 12px;
+            border-radius:20px;
+        }
+
+    </style>
+
 </head>
-<body class="bg-light">
+
+<body>
 
 <div class="container py-5">
 
-    <div class="d-flex justify-content-between align-items-center mb-4">
-        <div>
-            <h2 class="fw-bold">
-                <i class="bi bi-people-fill text-primary"></i>
-                Data Mahasiswa
-            </h2>
-            <p class="text-muted mb-0">
-                Sistem Manajemen Tugas Mahasiswa
-            </p>
-        </div>
+<div class="d-flex justify-content-between align-items-center mb-4">
 
-        <a href="dashboard.php" class="btn btn-outline-secondary">
-            <i class="bi bi-arrow-left"></i> Kembali
+<div>
+
+<h2 class="page-title">
+<i class="bi bi-mortarboard-fill"></i>
+Data Mahasiswa
+</h2>
+
+<p class="text-secondary">
+Kelola seluruh data mahasiswa
+</p>
+
+</div>
+
+<div>
+
+<a href="dashboard.php" class="btn btn-secondary">
+<i class="bi bi-arrow-left"></i>
+Dashboard
+</a>
+
+</div>
+
+</div>
+
+<div class="card card-custom">
+
+<div class="card-body">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<a href="tambah_mahasiswa.php" class="btn btn-primary">
+<i class="bi bi-plus-circle"></i>
+Tambah Mahasiswa
+</a>
+
+<input
+type="text"
+class="form-control"
+placeholder="Cari mahasiswa..."
+style="max-width:280px;">
+
+</div>
+
+<div class="table-responsive">
+
+<table class="table table-hover align-middle">
+
+<thead>
+
+<tr>
+
+<th>No</th>
+<th>NIM</th>
+<th>Nama</th>
+<th>Prodi</th>
+<th>Kelas</th>
+<th>Email</th>
+<th>No HP</th>
+<th>Status</th>
+<th>Aksi</th>
+
+</tr>
+
+</thead>
+
+<tbody>
+<?php
+$no = 1;
+
+while($row = mysqli_fetch_assoc($data)){
+?>
+
+<tr>
+
+    <td class="text-center"><?= $no++; ?></td>
+
+    <td><?= $row['nim']; ?></td>
+
+    <td><?= $row['nama_mahasiswa']; ?></td>
+
+    <td><?= $row['prodi']; ?></td>
+
+    <td><?= $row['kelas']; ?></td>
+
+    <td><?= $row['email']; ?></td>
+
+    <td><?= $row['no_hp']; ?></td>
+
+    <td class="text-center">
+        <span class="badge-status">
+            <?= $row['status']; ?>
+        </span>
+    </td>
+
+    <td class="text-center">
+
+        <a href="hapus_mahasiswa.php?id=<?= $row['id_mahasiswa']; ?>"
+           class="btn btn-danger btn-sm"
+           onclick="return confirm('Yakin ingin menghapus data ini?')">
+            <i class="bi bi-trash"></i>
         </a>
-    </div>
 
-    <div class="card shadow border-0">
+    </td>
 
-        <div class="card-header bg-primary text-white d-flex justify-content-between align-items-center">
+</tr>
 
-            <h5 class="mb-0">
-                <i class="bi bi-person-vcard"></i>
-                Daftar Mahasiswa
-            </h5>
+<?php } ?>
 
-            <button class="btn btn-light btn-sm">
-                <i class="bi bi-plus-circle"></i>
-                Tambah Data
-            </button>
+</tbody>
 
-        </div>
-
-        <div class="card-body">
-
-           <div class="mb-3">
-    <input
-        type="text"
-        id="cariMahasiswa"
-        class="form-control"
-        placeholder="Cari mahasiswa...">
-</div>
-
-            <table class="table table-hover align-middle">
-
-                <thead class="table-light">
-                    <tr>
-                        <th>No</th>
-                        <th>NIM</th>
-                        <th>Nama</th>
-                        <th>Prodi</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-
-                    <tr>
-                        <td>1</td>
-                        <td>250212036</td>
-                        <td>Ahmad Fauzan</td>
-                        <td>Pendidikan Teknologi Informasi</td>
-                        <td>
-                
-                            <button class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>2</td>
-                        <td>250212037</td>
-                        <td>Siti Rahmah</td>
-                        <td>Teknik Informatika</td>
-                        <td>
-                    
-                            <button class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                    <tr>
-                        <td>3</td>
-                        <td>250212038</td>
-                        <td>Helmiatun Nisa</td>
-                        <td>Pendidikan Teknologi Informasi</td>
-                        <td>
-
-                            <button class="btn btn-danger btn-sm">
-                                <i class="bi bi-trash"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-                </tbody>
-
-            </table>
-
-        </div>
-
-    </div>
+</table>
 
 </div>
+
+</div>
+
+</div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>
