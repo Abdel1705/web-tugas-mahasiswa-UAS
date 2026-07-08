@@ -14,10 +14,6 @@ $data = mysqli_query($conn, "SELECT * FROM user_login");
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<style>
-    
-</style>
-
 </head>
 <body>
     <div class="container py-5">
@@ -69,15 +65,16 @@ $data = mysqli_query($conn, "SELECT * FROM user_login");
                                         </span>
                                     </td>
                                     <td>
-                                        <a href="edit_user.php=<?= $row['id_user']; ?>" class="btn btn-warning btn-sm">
+                                        <a href="edit_user.php?id=<?= $row['id_user']; ?>" class="btn btn-warning btn-sm">
                                             <i class="bi bi-pencil-square"></i>
                                         </a>
-                                        <a href="hapus_user.php=<?= $row['id_user']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus user ini?')">
+                                        <a href="hapus_user.php?id=<?= $row['id_user']; ?>" class="btn btn-danger btn-sm" onclick="return confirm('Yakin ingin menghapus user ini?')">
                                             <i class="bi bi-trash"></i>
                                         </a>
                                     </td>
                                 </tr>
-                                <?php } ?>
+                                <?php } 
+                                ?>
                             </tbody>
                         </table>
                     </div>
