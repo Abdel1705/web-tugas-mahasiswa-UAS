@@ -128,12 +128,15 @@ while($row=mysqli_fetch_assoc($data)){
 
 <td>
 
+<a href="edit_user.php?id=<?= $row['id_user']; ?>"
+class="btn btn-warning btn-sm">
+<i class="bi bi-pencil-square"></i>
+</a>
+
 <a href="hapus_user.php?id=<?= $row['id_user']; ?>"
 class="btn btn-danger btn-sm"
 onclick="return confirm('Yakin ingin menghapus user ini?')">
-
 <i class="bi bi-trash"></i>
-
 </a>
 
 </td>
