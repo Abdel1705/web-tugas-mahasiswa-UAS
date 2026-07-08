@@ -5,16 +5,19 @@ $data = mysqli_query($conn, "SELECT * FROM user_login");
 ?>
 
 <!DOCTYPE html>
-<html lang="id">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Data User</title>
+     <html lang="id">
+          <head>
+     <meta 
+        charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>
+        Data User
+    </title>
 
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-<style>
+         <style>
 body{
     background:#f5f7fb;
 }
@@ -48,14 +51,12 @@ body{
     padding:6px 12px;
     border-radius:20px;
 }
-</style>
+         </style>
 
-</head>
-<body>
-
-<div class="container py-5">
-
-<div class="d-flex justify-content-between align-items-center mb-4">
+          </head>
+      <body>
+          <div class="container py-5">
+             <div class="d-flex justify-content-between align-items-center mb-4">
 
 <div>
 <h2 class="page-title">
@@ -69,7 +70,7 @@ Data User
 <i class="bi bi-arrow-left"></i> Dashboard
 </a>
 
-</div>
+          </div>
 
 <div class="card">
 
@@ -136,7 +137,7 @@ class="btn btn-warning btn-sm">
 <a href="hapus_user.php?id=<?= $row['id_user']; ?>"
 class="btn btn-danger btn-sm"
 onclick="return confirm('Yakin ingin menghapus user ini?')">
-<i class="bi bi-trash"></i>
+<i class="bi bi-trash"></i> Hapus
 </a>
 
 </td>
