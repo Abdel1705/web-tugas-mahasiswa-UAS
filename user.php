@@ -1,7 +1,7 @@
 <?php
 include 'koneksi.php';
 
-$data = mysqli_query($conn, "SELECT * FROM user_login");
+$data = mysqli_query($koneksi, "SELECT * FROM user_login");
 ?>
 
 <!DOCTYPE html>
