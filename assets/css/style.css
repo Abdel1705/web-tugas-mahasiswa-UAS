@@ -152,14 +152,12 @@ body {
     font-weight:600;
     margin-bottom:20px;
 }
-
 .hero-title{
-    font-size:58px;
+    font-size:64px;
     font-weight:800;
-    line-height:1.2;
-    margin-bottom:15px;
+    line-height:1.1;
+    margin-bottom:20px;
 }
-
 .hero-title span{
     display:block;
     color:#2563eb;
