@@ -126,6 +126,10 @@ while($row = mysqli_fetch_assoc($data)){
     </td>
 
     <td class="text-center">
+        <a href="edit_mahasiswa.php?id=<?= $row['id_mahasiswa']; ?>"
+   class="btn btn-warning btn-sm">
+    <i class="bi bi-pencil-square"></i>
+</a>
 
         <a href="hapus_mahasiswa.php?id=<?= $row['id_mahasiswa']; ?>"
            class="btn btn-danger btn-sm"

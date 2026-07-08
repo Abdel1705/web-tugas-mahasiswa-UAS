@@ -607,3 +607,12 @@ body {
             padding:6px 12px;
             border-radius:20px;
         }
+        .table th,
+.table td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.table td:nth-child(2){
+    text-align: left;
+}
