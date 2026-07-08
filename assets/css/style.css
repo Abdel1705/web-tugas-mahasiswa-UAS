@@ -567,3 +567,185 @@ body{
     transform:translateY(-2px);
     transition:.3s;
 }
+/* ===========================EDIT USER MODERN =========================== */
+
+body{
+
+    background:linear-gradient(135deg,#eef5ff,#dbeafe);
+
+}
+
+.edit-user-card{
+
+    border:none;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+
+}
+
+.edit-user-header{
+
+    background:linear-gradient(90deg,#2563eb,#1d4ed8);
+
+    color:white;
+
+    padding:30px;
+
+}
+
+.edit-user-header h2{
+
+    font-weight:700;
+
+    margin-top:15px;
+
+}
+
+.edit-user-header p{
+
+    opacity:.9;
+
+}
+
+.user-avatar{
+
+    width:90px;
+
+    height:90px;
+
+    border-radius:50%;
+
+    background:white;
+
+    color:#2563eb;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:42px;
+
+    margin:auto;
+
+}
+
+.form-label{
+
+    font-weight:600;
+
+    color:#444;
+
+}
+
+.form-control,
+
+.form-select{
+
+    border-radius:12px;
+
+    padding:12px;
+
+    border:1px solid #ced4da;
+
+}
+
+.form-control:focus,
+
+.form-select:focus{
+
+    border-color:#2563eb;
+
+    box-shadow:0 0 10px rgba(37,99,235,.25);
+
+}
+
+.btn-save{
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px 25px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn-save:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+.btn-back{
+
+    border-radius:12px;
+
+    padding:12px 25px;
+
+    font-weight:600;
+
+}
+
+.card-body{
+
+    background:white;
+
+}
+
+@media(max-width:768px){
+
+.user-avatar{
+
+width:70px;
+
+height:70px;
+
+font-size:35px;
+
+}
+
+.edit-user-header{
+
+padding:20px;
+
+}
+
+}
+/* =========================HEADER EDIT USER========================= */
+
+.card-header{
+    background: linear-gradient(135deg,#0d6efd,#2b59ff) !important;
+}
+
+.card-header h2{
+    font-size:38px;
+    font-weight:700;
+}
+
+.card-header p{
+    font-size:18px;
+    opacity:.95;
+}
+
+.card-header .rounded-circle{
+    transition:.3s;
+}
+
+.card-header .rounded-circle:hover{
+    transform:rotate(10deg) scale(1.05);
+}
