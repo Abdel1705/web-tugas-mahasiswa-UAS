@@ -52,6 +52,10 @@ body{
     border-radius:20px;
 }
          </style>
+
+<style>
+    
+</style>
 </head>
 <body>
     <div class="container py-5">
@@ -120,5 +124,4 @@ body{
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     </body>
->>>>>>> a0292db19d5b40027cc09baa54a4ee75ed3880f2
 </html>

@@ -154,10 +154,20 @@ body {
 }
 
 .hero-title{
-    font-size:58px;
+    font-size:64px;
     font-weight:800;
-    line-height:1.2;
-    margin-bottom:15px;
+    line-height:1.1;
+    margin-bottom:20px;
+
+    /* untuk animasi */
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 1s ease;
+}
+
+.hero-title.show{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .hero-title span{
