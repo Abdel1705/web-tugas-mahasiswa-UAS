@@ -15,39 +15,7 @@ $data = mysqli_query($conn, "SELECT * FROM user_login");
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
 <style>
-body{
-    background:#f5f7fb;
-}
-
-.page-title{
-    font-size:30px;
-    font-weight:bold;
-    color:#1e3a8a;
-}
-
-.card{
-    border:none;
-    border-radius:18px;
-    box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-.table thead{
-    background:#2563eb;
-    color:#fff;
-}
-
-.table th,
-.table td{
-    text-align:center;
-    vertical-align:middle;
-}
-
-.badge-status{
-    background:#198754;
-    color:#fff;
-    padding:6px 12px;
-    border-radius:20px;
-}
+    
 </style>
 
 </head>
