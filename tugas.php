@@ -1,5 +1,24 @@
 <?php
 include 'koneksi.php';
+
+if (isset($_POST['simpan'])) {
+
+    $judul_tugas = $_POST['judul_tugas'];
+    $deskripsi = $_POST['deskripsi'];
+    $mata_kuliah = $_POST['mata_kuliah'];
+    $kelas = $_POST['kelas'];
+    $tanggal_dibuat = $_POST['tanggal_dibuat'];
+    $deadline = $_POST['deadline'];
+    $file_instruksi = $_POST['file_instruksi'];
+    $status_tugas = $_POST['status_tugas'];
+
+    mysqli_query($koneksi, "INSERT INTO tugas
+    (judul_tugas, deskripsi, mata_kuliah, kelas, tanggal_dibuat, deadline, file_instruksi, status_tugas)
+    VALUES
+    ('$judul_tugas','$deskripsi','$mata_kuliah','$kelas','$tanggal_dibuat','$deadline','$file_instruksi','$status_tugas')");
+}
+
+$data = mysqli_query($koneksi, "SELECT * FROM tugas ORDER BY id_tugas DESC");
 ?>
 <!DOCTYPE html>
 <html lang="id">
@@ -106,7 +125,9 @@ include 'koneksi.php';
                         </div>
 
                         <div class="col-md-12 d-flex gap-2">
-                            <button type="submit" class="btn btn-primary px-4">Simpan</button>
+                            <button type="submit" name="simpan" class="btn btn-primary px-4">
+                                Simpan
+                            </button>
                             <button type="reset" class="btn btn-outline-secondary px-4">Reset</button>
                         </div>
                     </div>
