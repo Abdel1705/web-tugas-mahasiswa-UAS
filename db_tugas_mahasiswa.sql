@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 07, 2026 at 12:01 PM
+-- Generation Time: Jul 09, 2026 at 08:35 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,8 +44,8 @@ CREATE TABLE `mahasiswa` (
 --
 
 INSERT INTO `mahasiswa` (`id_mahasiswa`, `nim`, `nama_mahasiswa`, `prodi`, `kelas`, `email`, `no_hp`, `status`, `created_at`) VALUES
-(1, '230101001', 'Ahmad Fauzan', 'Pendidikan Teknologi Informasi', 'Unit 01', 'ahmad@example.com', '081234567890', 'aktif', '2026-07-01 02:21:02'),
-(2, '230101002', 'Siti Rahmah', 'Pendidikan Teknologi Informasi', 'Unit 01', 'siti@example.com', '081234567891', 'aktif', '2026-07-01 02:21:02'),
+(1, '230101001', 'Ahmad Fauzan', 'Pendidikan Teknologi Informasi', 'Unit 02', 'ahmad@example.com', '081234567890', 'aktif', '2026-07-01 02:21:02'),
+(2, '230101002', 'Siti Aisyah', 'Pendidikan Teknologi Informasi', 'Unit 01', 'siti@example.com', '081234567891', 'aktif', '2026-07-01 02:21:02'),
 (3, '230101003', 'Muhammad Rizki', 'Pendidikan Teknologi Informasi', 'Unit 02', 'rizki@example.com', '081234567892', 'aktif', '2026-07-01 02:21:02'),
 (6, '250212030', 'Nadya Adelya', 'Pendidikan Teknologi Informasi ', 'Unit 02', 'na@gmail', '081234567890', 'aktif', '2026-07-07 05:27:44');
 
@@ -126,9 +126,10 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`id_user`, `nama_lengkap`, `username`, `password`, `role`, `status`, `created_at`) VALUES
-(1, 'Administrator Sistem', 'admin', 'admin123', 'admin', 'aktif', '2026-07-01 02:21:02'),
+(1, 'Administrator Sistem', 'admin', 'admin123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
 (2, 'Dosen Pengampu', 'dosen', 'dosen123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
-(3, 'Mahasiswa Demo', 'mahasiswa', 'mhs123', 'mahasiswa', 'aktif', '2026-07-01 02:21:02');
+(3, 'Mahasiswa Demo', 'mahasiswa', 'mhs123', 'mahasiswa', 'nonaktif', '2026-07-01 02:21:02'),
+(7, 'Helmiatun Nisa m.pd.spd', 'Nisa', '7690865', 'dosen', 'nonaktif', '2026-07-09 05:36:50');
 
 -- --------------------------------------------------------
 
@@ -197,7 +198,7 @@ ALTER TABLE `user_login`
 -- AUTO_INCREMENT for table `mahasiswa`
 --
 ALTER TABLE `mahasiswa`
-  MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id_mahasiswa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `pengumpulan_tugas`
@@ -215,7 +216,7 @@ ALTER TABLE `tugas`
 -- AUTO_INCREMENT for table `user_login`
 --
 ALTER TABLE `user_login`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- Constraints for dumped tables
