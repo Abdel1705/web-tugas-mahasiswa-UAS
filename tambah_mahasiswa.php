@@ -128,11 +128,8 @@ include "koneksi.php";
                             <i class="bi bi-check-circle-fill"></i>
                             Status
                         </label>
-
-                        <select
-                            name="status"
-                            class="form-select">
-
+                        <select name="status" class="form-select" required>
+                            <option value="">Pilih Status</option>
                             <option value="aktif">Aktif</option>
                             <option value="nonaktif">Nonaktif</option>
 

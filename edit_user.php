@@ -94,12 +94,14 @@ if(!$row){
                         </label>
                         <select
                         name="role"
-                        class="form-select">
-                        <option value="admin" <?= $row['role']=="admin" ? "selected" : ""; ?>>
-                            Admin
-                        </option>
-                        <option value="dosen" <?= $row['role']=="dosen" ? "selected" : ""; ?>>
-                            Dosen
+                        class="form-select"
+                        required>
+                            <option value="">Pilih Role</option>
+                            <option value="admin" <?= $row['role']=="admin" ? "selected" : ""; ?>>
+                                Admin
+                            </option>
+                            <option value="dosen" <?= $row['role']=="dosen" ? "selected" : ""; ?>>
+                                Dosen
                         </option>
                         <option value="mahasiswa" <?= $row['role']=="mahasiswa" ? "selected" : ""; ?>>
                             Mahasiswa
@@ -112,14 +114,12 @@ if(!$row){
                         <i class="bi bi-check-circle-fill me-2"></i>
                         Status
                     </label>
-                    <select
-                        name="status"
-                        class="form-select">
+                    <select name="status" class="form-select" required>
                         <option value="aktif" <?= $row['status']=="aktif" ? "selected" : ""; ?>>
                             Aktif
                         </option>
                         <option value="nonaktif" <?= $row['status']=="nonaktif" ? "selected" : ""; ?>>
-                            Nonaktif
+                            nonaktif
                         </option>
                     </select>
                 </div>

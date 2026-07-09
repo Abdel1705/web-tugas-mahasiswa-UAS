@@ -76,8 +76,7 @@ include "koneksi.php";
                             name="role"
                             class="form-select"
                             required>
-                            name="role"
-                            class="form-select">
+                            <option value="">Pilih Role</option>
                             <option value="admin">Admin</option>
                             <option value="dosen">Dosen</option>
                             <option value="mahasiswa">Mahasiswa</option>
@@ -88,20 +87,13 @@ include "koneksi.php";
                             <i class="bi bi-check-circle-fill"></i>
                             Status
                         </label>
-                        <select
-                            name="status"
-                            class="form-select"
-                            required>
+                        <select name="status" class="form-select" required>
                             <option value="aktif">Aktif</option>
                             <option value="nonaktif">Nonaktif</option>
                         </select>
                     </div>
-                    class="form-select">
-                    <option value="aktif">Aktif</option>
-                    <option value="nonaktif">Nonaktif</option>
-                </select>
+                </div>
             </div>
-        </div>
         <div class="d-flex justify-content-end gap-3">
             <a href="user.php" class="btn btn-secondary">
                 <i class="bi bi-arrow-left-circle"></i>
