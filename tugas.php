@@ -9,6 +9,7 @@ include 'koneksi.php';
     <title>Data Tugas | Sistem Manajemen Tugas Mahasiswa</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -145,10 +146,18 @@ include 'koneksi.php';
                                 <td>Unit 01</td>
                                 <td>10 Juli 2026, 23:59</td>
                                 <td><span class="badge badge-soft-primary">Aktif</span></td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-danger">Hapus</a>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-warning btn-sm me-2">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
                                 </td>
+                            </tr>
+                        </a>
+                    </td>
                             </tr>
 
                             <tr>
@@ -161,13 +170,17 @@ include 'koneksi.php';
                                 <td>Unit 01</td>
                                 <td>12 Juli 2026, 23:59</td>
                                 <td><span class="badge badge-soft-primary">Aktif</span></td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-danger">Hapus</a>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-warning btn-sm me-2">
+                                         <i class="bi bi-pencil-square"></i>
+                                        </a>
+                                        <a href="#" class="btn btn-danger btn-sm"
+                                        onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
-
-                            <tr>
+                        <tr>
                                 <td>3</td>
                                 <td>
                                     <strong>CRUD Data Mahasiswa</strong>
@@ -177,9 +190,14 @@ include 'koneksi.php';
                                 <td>Unit 02</td>
                                 <td>15 Juli 2026, 23:59</td>
                                 <td><span class="badge badge-soft-warning">Draft</span></td>
-                                <td>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-danger">Hapus</a>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-warning btn-sm me-2">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a href="#" class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                       <i class="bi bi-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>
