@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2026 at 10:49 AM
+-- Generation Time: Jul 09, 2026 at 03:31 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -48,6 +48,7 @@ INSERT INTO `mahasiswa` (`id_mahasiswa`, `nim`, `nama_mahasiswa`, `prodi`, `kela
 (2, '230101002', 'Siti Aisyah', 'Pendidikan Teknologi Informasi', 'Unit 01', 'siti@example.com', '081234567891', 'aktif', '2026-07-01 02:21:02'),
 (3, '230101003', 'Muhammad Rizki', 'Pendidikan Teknologi Informasi', 'Unit 02', 'rizki@example.com', '081234567892', 'aktif', '2026-07-01 02:21:02'),
 (6, '250212030', 'Nadya Adelya', 'Pendidikan Teknologi Informasi ', 'Unit 02', 'na@gmail', '081234567890', 'aktif', '2026-07-07 05:27:44'),
+(11, '12556789', 'rajulun', 'bahasa arab', 'unit4', 'asal@trus', '098776655443', 'nonaktif', '2026-07-09 08:54:34'),
 (14, '123456789', 'helmi', 'matimatika', 'Unit 02', 'helmiatunnisa68@gmail.com', '081234567890', 'nonaktif', '2026-07-09 06:45:33');
 
 -- --------------------------------------------------------
