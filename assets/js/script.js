@@ -1,5 +1,5 @@
 const searchInput = document.getElementById("searchInput");
-const table = document.getElementById("tabelTugas");
+const table = document.getElementById("tabelData");
 
 if (searchInput && table) {
     const rows = table.getElementsByTagName("tr");
