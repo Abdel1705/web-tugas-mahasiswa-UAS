@@ -28,7 +28,6 @@ if($query){
     </script>
     ";
 }else{
-    echo "
-    die(mysqli_error($koneksi));
+    die("Error: " . mysqli_error($koneksi));
 }
 ?>

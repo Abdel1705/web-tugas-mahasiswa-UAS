@@ -97,7 +97,7 @@ if(!$row){
                         class="form-select"
                         required>
                             <option value="">Pilih Role</option>
-                            <option value="admin" <?= $row['role']=="dosen" ? "selected" : ""; ?>>
+                            <option value="dosen" <?= $row['role']=="dosen" ? "selected" : ""; ?>>
                                 Dosen
                             </option>
                             <option value="asisten_dosen" <?= $row['role']=="asisten_dosen" ? "selected" : ""; ?>>

@@ -77,8 +77,8 @@ include "koneksi.php";
                             class="form-select"
                             required>
                             <option value="">Pilih Role</option>
-                            <option value="admin">Admin</option>
                             <option value="dosen">Dosen</option>
+                            <option value="asisten_dosen">Asisten Dosen</option>
                             <option value="mahasiswa">Mahasiswa</option>
                         </select>
                     </div>
