@@ -117,8 +117,8 @@ CREATE TABLE `user_login` (
   `nama_lengkap` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` enum('admin','dosen','mahasiswa') DEFAULT 'mahasiswa',
-  `status` enum('aktif','nonaktif') DEFAULT 'aktif',
+  `role` enum('dosen','asisten dosen','mahasiswa') DEFAULT 'mahasiswa',
+  `status` enum('aktif','aktif') DEFAULT 'aktif',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -127,10 +127,9 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`id_user`, `nama_lengkap`, `username`, `password`, `role`, `status`, `created_at`) VALUES
-(1, 'Administrator Sistem', 'admin', 'admin123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
-(2, 'Dosen Pengampu', 'dosen', 'dosen123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
-(3, 'Mahasiswa Demo', 'mahasiswa', 'mhs123', 'mahasiswa', 'nonaktif', '2026-07-01 02:21:02'),
-(7, 'Helmiatun Nisa m.pd.spd', 'Nisa', '7690865', 'dosen', 'nonaktif', '2026-07-09 05:36:50');
+(1, 'dosen', 'dosen', 'dosen123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
+(2, 'asisten dosen', 'asisten', 'asdos123', 'asisten dosen', 'aktif', '2026-07-01 02:21:02'),
+(3, 'mahasiswa ', 'mahasiswa', 'mhs123', 'mahasiswa', 'aktif', '2026-07-01 02:21:02'),
 
 -- --------------------------------------------------------
 
