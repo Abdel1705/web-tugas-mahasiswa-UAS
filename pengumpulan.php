@@ -10,6 +10,7 @@ include 'koneksi.php';
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
 
@@ -114,8 +115,16 @@ include 'koneksi.php';
                         </div>
 
                         <div class="col-md-12 d-flex gap-2">
-                            <button type="submit" class="btn btn-primary px-4">Simpan</button>
-                            <button type="reset" class="btn btn-outline-secondary px-4">Reset</button>
+                            <button type="submit" class="btn btn-primary px-4">
+                                <i class="bi bi-save"></i>
+                                Simpan
+                            </button>
+                            <button 
+                            type="reset"
+                            class="btn btn-outline-secondary ms-2">
+                            <i class="bi bi-arrow-clockwise"></i>
+                            Reset
+                            </button>
                         </div>
                     </div>
                 </form>
@@ -168,8 +177,15 @@ include 'koneksi.php';
                                 <td><span class="badge badge-soft-success">Dikumpulkan</span></td>
                                 <td>90</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-danger">Hapus</a>
+                                   <a href="edit_pengumpulan.php?id=<?= $row['id_pengumpulan']; ?>"
+                                       class="btn btn-warning btn-sm me-2">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a href="hapus_pengumpulan.php?id=<?= $row['id_pengumpulan']; ?>"
+                                       class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
 
@@ -185,8 +201,15 @@ include 'koneksi.php';
                                 <td><span class="badge badge-soft-warning">Belum</span></td>
                                 <td>-</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-danger">Hapus</a>
+                                    <a href="edit_pengumpulan.php?id=<?= $row['id_pengumpulan']; ?>"
+                                       class="btn btn-warning btn-sm me-2">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a href="hapus_pengumpulan.php?id=<?= $row['id_pengumpulan']; ?>"
+                                       class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
 
@@ -202,8 +225,15 @@ include 'koneksi.php';
                                 <td><span class="badge badge-soft-danger">Terlambat</span></td>
                                 <td>75</td>
                                 <td>
-                                    <a href="#" class="btn btn-sm btn-outline-primary">Edit</a>
-                                    <a href="#" class="btn btn-sm btn-outline-danger">Hapus</a>
+                                    <a href="edit_pengumpulan.php?id=<?= $row['id_pengumpulan']; ?>"
+                                       class="btn btn-warning btn-sm me-2">
+                                        <i class="bi bi-pencil-square"></i>
+                                    </a>
+                                    <a href="hapus_pengumpulan.php?id=<?= $row['id_pengumpulan']; ?>"
+                                       class="btn btn-danger btn-sm"
+                                       onclick="return confirm('Yakin ingin menghapus data ini?')">
+                                        <i class="bi bi-trash"></i>
+                                    </a>
                                 </td>
                             </tr>
                         </tbody>
