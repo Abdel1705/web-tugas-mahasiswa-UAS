@@ -155,8 +155,17 @@ $data = mysqli_query($koneksi, "SELECT * FROM tugas ORDER BY id_tugas DESC");
         </form>
     </section>
     <section class="content-card p-4">
+        <div class="row mb-3">
+        <div class="col-md-4">
+        <input
+            type="text"
+            id="searchInput"
+            class="form-control"
+            placeholder="🔍 Cari judul, mata kuliah, atau kelas...">
+        </div>
+        </div>
         <div class="table-responsive">
-            <table class="table table-bordered">
+            <table class="table table-bordered" id="tableTugas">
                 <thead>
                     <tr>
                         <th>No</th>
@@ -228,6 +237,6 @@ while ($row = mysqli_fetch_assoc($data)) {
 </div>
 
 </main>
-
+<script src="assets/js/script.js"></script>
 </body>
 </html>
