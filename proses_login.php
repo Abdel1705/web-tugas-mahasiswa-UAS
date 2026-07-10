@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "koneksi.php";
 
 $username = $_POST['username'];
@@ -14,11 +15,11 @@ if($data['role'] =="dosen" ||
    $data['role'] =="asisten_dosen" ||
    $data['role'] =="mahasiswa"){
 
-   $_SESSION['username'] = $data['username'];
+   $_SESSION['username'] = 
+   $data['username'];
    $_SESSION['role'] = $data['role'];
 
-    header("location:
-    dashboard.php");
+    header("Location: dashboard.php");
     exit;
 
 }else{
