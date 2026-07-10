@@ -31,5 +31,4 @@ if($query){
     echo "
     die(mysqli_error($koneksi));
 }
-
 ?>
