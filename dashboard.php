@@ -82,31 +82,26 @@ include 'koneksi.php';
                 <a href="rekap.php" class="btn btn-outline-primary btn-lg ms-2">
                     Rekap
                 </a>
-
+        </div>
+        <div class="hero-plane">
+            <i class="bi bi-send"></i>
+        </div>
+        <div class="hero-spark">
+            <i class="bi bi-stars"></i>
+        </div>
+        <div class="hero-list">
+             <i class="bi bi-card-checklist"></i>
             </div>
-            <div class="hero-plane">
-    <i class="bi bi-send"></i>
-</div>
-
-<div class="hero-spark">
-    <i class="bi bi-stars"></i>
-</div>
-
-<div class="hero-list">
-    <i class="bi bi-card-checklist"></i>
-</div>
-
-<div class="hero-chart">
-    <i class="bi bi-pie-chart"></i>
-</div>
-
-<svg class="hero-line" viewBox="0 0 300 180">
-    <path d="M20 150 C80 20 170 210 280 30"
-          stroke="#3b82f6"
-          stroke-width="3"
-          stroke-dasharray="10 8"
-          fill="none"/>
-</svg>
+            <div class="hero-chart">
+                <i class="bi bi-pie-chart"></i>
+            </div>
+            <svg class="hero-line" viewBox="0 0 300 180">
+                <path d="M20 150 C80 20 170 210 280 30"
+                stroke="#3b82f6"
+                stroke-width="3"
+                stroke-dasharray="10 8"
+                fill="none"/>
+            </svg>
 
         </div>
         </div>
@@ -173,7 +168,7 @@ include 'koneksi.php';
                     </div>
                 </div>
             </section>
-
+            
             <section class="row g-4">
                 <div class="col-lg-8">
                     <div class="content-card p-4">

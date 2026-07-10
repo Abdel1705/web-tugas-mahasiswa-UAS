@@ -185,8 +185,7 @@ $no = 1;
 
 while ($row = mysqli_fetch_assoc($data)) {
 ?>
-
-<tr>
+  <tr>
     <td><?= $no++; ?></td>
     <td>
         <strong><?= $row['judul_tugas']; ?></strong><br>
@@ -207,17 +206,14 @@ while ($row = mysqli_fetch_assoc($data)) {
 
         <?php } ?>
     </td>
-
-    <td>
-
+       <td>
         <a href="edit_tugas.php?id=<?= $row['id_tugas']; ?>" class="btn btn-warning btn-sm">
             <i class="bi bi-pencil-square"></i>
         </a>
-
-        <a href="hapus_tugas.php?id=<?= $row['id_tugas']; ?>"
-           class="btn btn-danger btn-sm"
-           onclick="return confirm('Yakin ingin menghapus data ini?')">
-            <i class="bi bi-trash"></i>
+         <a href="hapus_tugas.php?id=<?= $row['id_tugas']; ?>"
+         class="btn btn-danger btn-sm"
+         onclick="return confirm('Yakin ingin menghapus data ini?')">
+         <i class="bi bi-trash"></i>
         </a>
 
     </td>
