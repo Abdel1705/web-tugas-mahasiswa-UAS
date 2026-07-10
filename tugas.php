@@ -165,7 +165,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM tugas ORDER BY id_tugas DESC");
         </div>
         </div>
         <div class="table-responsive">
-            <table class="table table-bordered" id="tableTugas">
+            <table class="table table-bordered" id="tabelTugas">
                 <thead>
                     <tr>
                         <th>No</th>
