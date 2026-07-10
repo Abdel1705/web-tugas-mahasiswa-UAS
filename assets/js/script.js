@@ -1,20 +1,22 @@
 const searchInput = document.getElementById("searchInput");
-const table = document.getElementById("tabelData");
+const table = document.querySelector(".table-search");
 
 if (searchInput && table) {
-    const rows = table.getElementsByTagName("tr");
+
+    const rows = table.querySelectorAll("tbody tr");
 
     searchInput.addEventListener("keyup", function () {
-        const keyword = searchInput.value.toLowerCase();
 
-        for (let i = 1; i < rows.length; i++) {
-            const text = rows[i].textContent.toLowerCase();
+        const keyword = this.value.toLowerCase();
 
-            if (text.includes(keyword)) {
-                rows[i].style.display = "";
-            } else {
-                rows[i].style.display = "none";
-            }
-        }
+        rows.forEach(function(row){
+
+            const isi = row.textContent.toLowerCase();
+
+            row.style.display = isi.includes(keyword) ? "" : "none";
+
+        });
+
     });
+
 }

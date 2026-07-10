@@ -85,7 +85,7 @@ include 'koneksi.php';
                     <h5 class="fw-bold mb-3 mb-md-0">Filter Rekap</h5>
 
                     <form action="#" method="get" class="d-flex flex-column flex-md-row gap-2">
-                        <input type="search" class="form-control" name="keyword" placeholder="Cari judul tugas">
+                        <input type="search" id="searchInput" class="form-control" name="keyword" placeholder="🔍Cari judul tugas">
                         <select class="form-select" name="kelas">
                             <option value="">Semua Kelas</option>
                             <option value="Unit 01">Unit 01</option>
@@ -105,7 +105,7 @@ include 'koneksi.php';
                 <h5 class="fw-bold mb-3">Tabel Rekap Pengumpulan</h5>
 
                 <div class="table-responsive">
-                    <table class="table align-middle">
+                    <table class="table table-search">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -177,6 +177,6 @@ include 'koneksi.php';
 
         </div>
     </main>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>
