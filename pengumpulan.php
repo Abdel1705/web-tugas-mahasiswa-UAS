@@ -136,7 +136,7 @@ include 'koneksi.php';
 
                     <div class="d-flex flex-column flex-md-row gap-2">
                         <form action="#" method="get">
-                            <input type="search" class="form-control" name="keyword" placeholder="Cari nama, NIM, atau tugas">
+                            <input type="search" id="searchInput" class="form-control" name="keyword" placeholder="🔍Cari nama, NIM, atau tugas">
                         </form>
 
                         <form action="#" method="get">
@@ -151,7 +151,7 @@ include 'koneksi.php';
                 </div>
 
                 <div class="table-responsive">
-                    <table class="table align-middle">
+                    <table class="table table-search">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -243,6 +243,6 @@ include 'koneksi.php';
 
         </div>
     </main>
-
+    <script src="assets/js/script.js"></script>
 </body>
 </html>

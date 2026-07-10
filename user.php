@@ -41,10 +41,10 @@ $data = mysqli_query($koneksi, "SELECT * FROM user_login");
                     <a href="tambah_user.php" class="btn btn-primary">
                         <i class="bi bi-plus-circle"></i> Tambah User
                     </a>
-                    <input type="text" class="form-control" placeholder="Cari user..." style="width:250px;">
+                    <input type="text" id="searchInput" class="form-control" placeholder="🔍 Cari user..." style="width:250px;">
                 </div>
                 <div class="table-responsive">
-                    <table class="table table-bordered table-hover">
+                    <table class="table table-bordered table-hover table-search">
                         <thead>
                             <tr>
                                 <th>No</th>
@@ -88,5 +88,6 @@ $data = mysqli_query($koneksi, "SELECT * FROM user_login");
             </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>

@@ -55,14 +55,14 @@ $data = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
         </a>
         <input
         type="text"
+        id="searchInput"
         class="form-control"
-        placeholder="Cari mahasiswa..."
+        placeholder="🔍Cari mahasiswa..."
         style="max-width:280px;">
     </div>
 
     <div class="table-responsive">
-            <table
-            class="table table-hover align-middle">
+            <table class="table table-hover table-search">
             <thead>
                 <tr>
                     <th>No</th>
@@ -131,5 +131,6 @@ $data = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
     </div>
   </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
- </body>
+<script src="assets/js/script.js"></script> 
+</body>
 </html>
