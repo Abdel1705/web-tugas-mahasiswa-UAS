@@ -129,7 +129,7 @@ CREATE TABLE `user_login` (
 
 INSERT INTO `user_login` (`id_user`, `nama_lengkap`, `username`, `password`, `role`, `status`, `created_at`) VALUES
 (1, 'dosen', 'dosen01', 'dosen123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
-(2, 'asisten dosen', 'asisten dosen01', 'asdos123', 'asisten dosen', 'aktif', '2026-07-01 02:21:02'),
+(2, 'asisten dosen', 'asistendosen01', 'asdos123', 'asisten dosen', 'aktif', '2026-07-01 02:21:02'),
 (3, 'mahasiswa ', 'mahasiswa01', 'mhs123', 'mahasiswa', 'aktif', '2026-07-01 02:21:02'),
 
 -- --------------------------------------------------------
