@@ -29,11 +29,6 @@ if($query){
     ";
 }else{
     echo "
-    <script>
-        alert('Data gagal diubah!');
-        window.history.back();
-    </script>
-    ";
+    die(mysqli_error($koneksi));
 }
-
 ?>

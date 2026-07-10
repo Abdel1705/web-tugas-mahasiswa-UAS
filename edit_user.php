@@ -97,15 +97,15 @@ if(!$row){
                         class="form-select"
                         required>
                             <option value="">Pilih Role</option>
-                            <option value="admin" <?= $row['role']=="admin" ? "selected" : ""; ?>>
-                                Admin
-                            </option>
-                            <option value="dosen" <?= $row['role']=="dosen" ? "selected" : ""; ?>>
+                            <option value="admin" <?= $row['role']=="dosen" ? "selected" : ""; ?>>
                                 Dosen
-                        </option>
-                        <option value="mahasiswa" <?= $row['role']=="mahasiswa" ? "selected" : ""; ?>>
-                            Mahasiswa
-                        </option>
+                            </option>
+                            <option value="asisten_dosen" <?= $row['role']=="asisten_dosen" ? "selected" : ""; ?>>
+                                Asisten Dosen
+                            </option>
+                            <option value="mahasiswa" <?= $row['role']=="mahasiswa" ? "selected" : ""; ?>>
+                                Mahasiswa
+                            </option>
                     </select>
                 </div>
 
