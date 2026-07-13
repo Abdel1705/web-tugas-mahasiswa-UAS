@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 09, 2026 at 03:31 PM
+-- Generation Time: Jul 13, 2026 at 05:25 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -105,7 +105,8 @@ CREATE TABLE `tugas` (
 
 INSERT INTO `tugas` (`id_tugas`, `judul_tugas`, `deskripsi`, `mata_kuliah`, `kelas`, `tanggal_dibuat`, `deadline`, `file_instruksi`, `status_tugas`, `id_user`, `created_at`) VALUES
 (1, 'Membuat Halaman Login', 'Mahasiswa membuat halaman login menggunakan HTML, CSS, dan Bootstrap.', 'Pemrograman Web', 'Unit 01', '2026-07-01', '2026-07-10 23:59:00', 'instruksi-login.pdf', 'aktif', 2, '2026-07-01 02:21:02'),
-(2, 'Desain Database MySQL', 'Mahasiswa merancang database sederhana sesuai studi kasus masing-masing.', 'Basis Data', 'Unit 01', '2026-07-01', '2026-07-12 23:59:00', 'instruksi-database.pdf', 'aktif', 2, '2026-07-01 02:21:02');
+(2, 'Desain Database MySQL', 'Mahasiswa merancang database sederhana sesuai studi kasus masing-masing.', 'Basis Data', 'Unit 01', '2026-07-01', '2026-07-12 23:59:00', 'instruksi-database.pdf', 'aktif', 2, '2026-07-01 02:21:02'),
+(6, 'menghitung berapa sudah pak wan kasih tugas ', 'unek unek', 'matimatika', 'Unit 01', '2026-06-30', '2026-07-02 23:51:00', 'seberapa pusing sudah tolong deskripsikan kan ya', 'aktif', NULL, '2026-07-09 16:52:26');
 
 -- --------------------------------------------------------
 
@@ -118,8 +119,8 @@ CREATE TABLE `user_login` (
   `nama_lengkap` varchar(100) NOT NULL,
   `username` varchar(50) NOT NULL,
   `password` varchar(255) NOT NULL,
-  `role` enum('dosen','asisten dosen','mahasiswa') DEFAULT 'mahasiswa',
-  `status` enum('aktif','aktif') DEFAULT 'aktif',
+  `role` enum('admin','dosen','mahasiswa') DEFAULT 'mahasiswa',
+  `status` enum('aktif','nonaktif') DEFAULT 'aktif',
   `created_at` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -128,12 +129,15 @@ CREATE TABLE `user_login` (
 --
 
 INSERT INTO `user_login` (`id_user`, `nama_lengkap`, `username`, `password`, `role`, `status`, `created_at`) VALUES
-(1, 'dosen', 'dosen01', 'dosen123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
-(2, 'asisten dosen', 'asistendosen01', 'asdos123', 'asisten dosen', 'aktif', '2026-07-01 02:21:02'),
-(3, 'mahasiswa ', 'mahasiswa01', 'mhs123', 'mahasiswa', 'aktif', '2026-07-01 02:21:02'),
+(1, 'Administrator Sistem', 'admin', 'admin123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
+(2, 'Dosen Pengampu', 'dosen', 'dosen123', 'dosen', 'aktif', '2026-07-01 02:21:02'),
+(3, 'Mahasiswa Demo', 'mahasiswa', 'mhs123', 'mahasiswa', 'nonaktif', '2026-07-01 02:21:02'),
+(7, 'Helmiatun Nisa m.pd.spd', 'Nisa', '7690865', 'dosen', 'nonaktif', '2026-07-09 05:36:50'),
+(9, 'Helmiatun Nisa m.pd.spd', 'Nisaa', '12345678909', 'dosen', 'nonaktif', '2026-07-09 05:36:50');
 
 -- --------------------------------------------------------
 
+--
 -- Stand-in structure for view `view_rekap_pengumpulan`
 -- (See below for the actual view)
 --
@@ -210,13 +214,13 @@ ALTER TABLE `pengumpulan_tugas`
 -- AUTO_INCREMENT for table `tugas`
 --
 ALTER TABLE `tugas`
-  MODIFY `id_tugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_tugas` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `user_login`
 --
 ALTER TABLE `user_login`
-  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id_user` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Constraints for dumped tables
