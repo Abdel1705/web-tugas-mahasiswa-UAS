@@ -1,22 +1,59 @@
-const searchInput = document.getElementById("searchInput");
-const table = document.querySelector(".table-search");
+document.addEventListener("DOMContentLoaded", function () {
 
-if (searchInput && table) {
+    // =========================
+    // SEARCH + FILTER STATUS
+    // =========================
 
-    const rows = table.querySelectorAll("tbody tr");
+    const searchInput = document.getElementById("searchInput");
+    const filterStatus = document.getElementById("filterStatus");
+    const rows = document.querySelectorAll(".table-search tbody tr");
 
-    searchInput.addEventListener("keyup", function () {
+    if (searchInput && filterStatus) {
 
-        const keyword = this.value.toLowerCase();
+        function filterData() {
+            const keyword = searchInput.value.toLowerCase();
+            const statusDipilih = filterStatus.value.toLowerCase();
 
-        rows.forEach(function(row){
+            rows.forEach(function(row) {
 
-            const isi = row.textContent.toLowerCase();
+                const isiBaris = row.innerText.toLowerCase();
+                const status = row.cells[5].innerText.trim().toLowerCase();
 
-            row.style.display = isi.includes(keyword) ? "" : "none";
+                if (
+                    isiBaris.includes(keyword) &&
+                    (statusDipilih === "" || status === statusDipilih)
+                ) {
+                    row.style.display = "";
+                } else {
+                    row.style.display = "none";
+                }
+            });
+        }
 
-        });
+        searchInput.addEventListener("keyup", filterData);
+        filterStatus.addEventListener("change", filterData);
+    }
 
+
+// =========================
+// SHOW / HIDE PASSWORD
+// =========================
+
+const passwordField = document.getElementById("password");
+const toggleBtn = document.getElementById("togglePassword");
+
+if (passwordField && toggleBtn) {
+    toggleBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            toggleBtn.innerHTML = '<i class="bi bi-eye-slash-fill"></i>';
+        } else {
+            passwordField.type = "password";
+            toggleBtn.innerHTML = '<i class="bi bi-eye-fill"></i>';
+        }
     });
-
 }
+
+});
