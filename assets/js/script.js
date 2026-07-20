@@ -123,3 +123,54 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 });
+// =========================
+// SORT TABLE
+// =========================
+
+const sortableHeaders = document.querySelectorAll(".sortable");
+
+sortableHeaders.forEach((header) => {
+
+    header.style.cursor = "pointer";
+
+    header.addEventListener("click", function () {
+
+        const table = header.closest("table");
+        const tbody = table.querySelector("tbody");
+
+        const rows = Array.from(tbody.querySelectorAll("tr"));
+
+        const column = Array.from(header.parentNode.children).indexOf(header);
+
+        const asc = !header.classList.contains("asc");
+
+        sortableHeaders.forEach(h => {
+            h.classList.remove("asc", "desc");
+        });
+
+        header.classList.add(asc ? "asc" : "desc");
+
+        rows.sort((a, b) => {
+
+            let x = a.cells[column].innerText.trim();
+            let y = b.cells[column].innerText.trim();
+
+            // jika angka
+            if (!isNaN(x) && !isNaN(y)) {
+                return asc
+                    ? Number(x) - Number(y)
+                    : Number(y) - Number(x);
+            }
+
+            // jika teks
+            return asc
+                ? x.localeCompare(y)
+                : y.localeCompare(x);
+
+        });
+
+        rows.forEach(row => tbody.appendChild(row));
+
+    });
+
+});

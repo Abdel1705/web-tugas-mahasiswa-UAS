@@ -749,3 +749,11 @@ padding:20px;
 .card-header .rounded-circle:hover{
     transform:rotate(10deg) scale(1.05);
 }
+.sortable{
+    cursor:pointer;
+    user-select:none;
+}
+
+.sortable:hover{
+    color:#2563eb;
+}

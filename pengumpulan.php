@@ -155,12 +155,12 @@ include 'koneksi.php';
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Mahasiswa</th>
-                                <th>Tugas</th>
-                                <th>Tanggal Kumpul</th>
-                                <th>Link File</th>
-                                <th>Status</th>
-                                <th>Nilai</th>
+                                <th class="sortable">Mahasiswa</th>
+                                <th class="sortable">Tugas</th>
+                                <th class="sortable">Tanggal Kumpul</th>
+                                <th class="sortable">Link File</th>
+                                <th class="sortable">Status</th>
+                                <th class="sortable">Nilai</th>
                                 <th width="170">Aksi</th>
                             </tr>
                         </thead>

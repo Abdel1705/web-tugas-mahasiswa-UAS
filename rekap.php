@@ -109,14 +109,14 @@ include 'koneksi.php';
                         <thead>
                             <tr>
                                 <th>No</th>
-                                <th>Judul Tugas</th>
-                                <th>Mata Kuliah</th>
-                                <th>Kelas</th>
-                                <th>Total Data</th>
-                                <th>Dikumpulkan</th>
-                                <th>Belum</th>
-                                <th>Terlambat</th>
-                                <th>Persentase</th>
+                                <th class="sortable">Judul Tugas</th>
+                                <th class="sortable">Mata Kuliah</th>
+                                <th class="sortable">Kelas</th>
+                                <th class="sortable">Total Data</th>
+                                <th class="sortable">Dikumpulkan</th>
+                                <th class="sortable">Belum</th>
+                                <th class="sortable">Terlambat</th>
+                                <th class="sortable">Persentase</th>
                             </tr>
                         </thead>
                         <tbody>
