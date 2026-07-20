@@ -85,7 +85,11 @@ include 'koneksi.php';
                     <h5 class="fw-bold mb-3 mb-md-0">Filter Rekap</h5>
 
                     <form action="#" method="get" class="d-flex flex-column flex-md-row gap-2">
-                        <input type="search" id="searchInput" class="form-control" name="keyword" placeholder="🔍Cari judul tugas">
+                    <small id="dataCounter" class="text-secondary">
+                            Menampilkan 0 dari 0 data
+                    </small>    
+                    <input type="search" id="searchInput" class="form-control" name="keyword" placeholder="🔍Cari judul tugas">
+        
                         <select id="filterKelas" class="form-select" name="kelas">
                             <option value="">Semua Kelas</option>
                             <option value="Unit 01">Unit 01</option>

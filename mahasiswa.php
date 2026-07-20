@@ -53,6 +53,9 @@ $data = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
             <i class="bi bi-plus-circle"></i>
             Tambah Mahasiswa
         </a>
+        <small id="dataCounter" class="text-secondary">
+                Menampilkan 0 dari 0 data
+            </small>
         <input
         type="text"
         id="searchInput"
@@ -60,7 +63,7 @@ $data = mysqli_query($koneksi, "SELECT * FROM mahasiswa");
         placeholder="🔍Cari mahasiswa..."
         style="max-width:280px;">
     </div>
-
+    
     <div class="table-responsive">
             <table class="table table-hover table-search">
             <thead>

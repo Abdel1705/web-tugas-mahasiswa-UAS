@@ -162,6 +162,9 @@ $data = mysqli_query($koneksi, "SELECT * FROM tugas ORDER BY id_tugas DESC");
             id="searchInput"
             class="form-control"
             placeholder="🔍 Cari judul, mata kuliah, atau kelas...">
+            <small id="dataCounter" class="text-secondary">
+                Menampilkan 0 dari 0 data
+            </small>
         </div>
         </div>
         <div class="table-responsive">

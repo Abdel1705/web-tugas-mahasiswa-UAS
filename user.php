@@ -41,6 +41,9 @@ $data = mysqli_query($koneksi, "SELECT * FROM user_login");
                     <a href="tambah_user.php" class="btn btn-primary">
                         <i class="bi bi-plus-circle"></i> Tambah User
                     </a>
+                    <small id="dataCounter" class="text-secondary">
+                        Menampilkan 0 dari 0 data
+                    </small>
                     <input type="text" id="searchInput" class="form-control" placeholder="🔍 Cari user..." style="width:250px;">
                 </div>
                 <div class="table-responsive">

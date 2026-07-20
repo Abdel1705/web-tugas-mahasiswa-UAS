@@ -39,72 +39,87 @@ document.addEventListener("DOMContentLoaded", function () {
 
         function filterTable() {
 
-            const keyword = searchInput.value.toLowerCase().trim();
+    const keyword = searchInput.value.toLowerCase().trim();
 
-            const status =
-                filterStatus ? filterStatus.value.toLowerCase() : "";
+    const status =
+        filterStatus ? filterStatus.value.toLowerCase() : "";
 
-            const kelas =
-                filterKelas ? filterKelas.value.toLowerCase() : "";
+    const kelas =
+        filterKelas ? filterKelas.value.toLowerCase() : "";
 
-            const matkul =
-                filterMatkul ? filterMatkul.value.toLowerCase() : "";
+    const matkul =
+        filterMatkul ? filterMatkul.value.toLowerCase() : "";
 
-            rows.forEach(row => {
+    let jumlahTampil = 0;
 
-                const cells = row.querySelectorAll("td");
-                let tampil = true;
+    rows.forEach(row => {
 
-                // =========================
-                // SEARCH
-                // =========================
-                if (keyword !== "") {
-                    const text = row.textContent.toLowerCase();
-                    if (!text.includes(keyword)) {
-                        tampil = false;
-                    }
-                }
+        const cells = row.querySelectorAll("td");
+        let tampil = true;
 
-                // =========================
-                // FILTER STATUS
-                // Halaman Pengumpulan
-                // =========================
-                if (filterStatus && status !== "") {
-                    const statusText = cells[5].textContent.toLowerCase().trim();
+        // =========================
+        // SEARCH
+        // =========================
+        if (keyword !== "") {
+            const text = row.textContent.toLowerCase();
 
-                    if (!statusText.includes(status)) {
-                        tampil = false;
-                    }
-                }
-
-                // =========================
-                // FILTER KELAS
-                // Halaman Rekap
-                // =========================
-                if (filterKelas && kelas !== "") {
-                    const kelasText = cells[3].textContent.toLowerCase().trim();
-
-                    if (kelasText !== kelas) {
-                        tampil = false;
-                    }
-                }
-
-                // =========================
-                // FILTER MATA KULIAH
-                // Halaman Rekap
-                // =========================
-                if (filterMatkul && matkul !== "") {
-                    const matkulText = cells[2].textContent.toLowerCase().trim();
-
-                    if (matkulText !== matkul) {
-                        tampil = false;
-                    }
-                }
-
-                row.style.display = tampil ? "" : "none";
-
-            });
+            if (!text.includes(keyword)) {
+                tampil = false;
+            }
         }
+
+        // =========================
+        // FILTER STATUS
+        // =========================
+        if (filterStatus && status !== "") {
+            const statusText = cells[5].textContent.toLowerCase().trim();
+
+            if (!statusText.includes(status)) {
+                tampil = false;
+            }
+        }
+
+        // =========================
+        // FILTER KELAS
+        // =========================
+        if (filterKelas && kelas !== "") {
+            const kelasText = cells[3].textContent.toLowerCase().trim();
+
+            if (kelasText !== kelas) {
+                tampil = false;
+            }
+        }
+
+        // =========================
+        // FILTER MATA KULIAH
+        // =========================
+        if (filterMatkul && matkul !== "") {
+            const matkulText = cells[2].textContent.toLowerCase().trim();
+
+            if (matkulText !== matkul) {
+                tampil = false;
+            }
+        }
+
+        row.style.display = tampil ? "" : "none";
+
+        if (tampil) {
+            jumlahTampil++;
+        }
+
+    });
+
+    // =========================
+    // LIVE COUNTER
+    // =========================
+    const dataCounter = document.getElementById("dataCounter");
+
+    if (dataCounter) {
+        dataCounter.textContent =
+            `Menampilkan ${jumlahTampil} dari ${rows.length} data`;
+    }
+
+}
 
         searchInput.addEventListener("input", filterTable);
 
@@ -119,6 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (filterMatkul) {
             filterMatkul.addEventListener("change", filterTable);
         }
+        filterTable();
 
     }
 

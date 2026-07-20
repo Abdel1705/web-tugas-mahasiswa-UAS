@@ -133,6 +133,9 @@ include 'koneksi.php';
             <section class="content-card p-4">
                 <div class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center mb-3">
                     <h5 class="fw-bold mb-3 mb-lg-0">Data Pengumpulan</h5>
+                      <small id="dataCounter" class="text-secondary">
+                         Menampilkan 3 dari 3 data
+                        </small>
 
                     <div class="d-flex flex-column flex-md-row gap-2">
                         <form action="#" method="get">
