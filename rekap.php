@@ -86,12 +86,12 @@ include 'koneksi.php';
 
                     <form action="#" method="get" class="d-flex flex-column flex-md-row gap-2">
                         <input type="search" id="searchInput" class="form-control" name="keyword" placeholder="🔍Cari judul tugas">
-                        <select class="form-select" name="kelas">
+                        <select id="filterKelas" class="form-select" name="kelas">
                             <option value="">Semua Kelas</option>
                             <option value="Unit 01">Unit 01</option>
                             <option value="Unit 02">Unit 02</option>
                         </select>
-                        <select class="form-select" name="mata_kuliah">
+                        <select id="filterMatkul" class="form-select" name="mata_kuliah">
                             <option value="">Semua Mata Kuliah</option>
                             <option value="Pemrograman Web">Pemrograman Web</option>
                             <option value="Basis Data">Basis Data</option>

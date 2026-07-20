@@ -140,7 +140,7 @@ include 'koneksi.php';
                         </form>
 
                         <form action="#" method="get">
-                            <select class="form-select" name="status">
+                            <select class="form-select" id="filterStatus" name="status">
                                 <option value="">Semua Status</option>
                                 <option value="dikumpulkan">Dikumpulkan</option>
                                 <option value="belum">Belum</option>
