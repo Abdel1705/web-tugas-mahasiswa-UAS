@@ -1,39 +1,24 @@
-document.addEventListener("DOMContentLoaded", function () {
+  document.addEventListener("DOMContentLoaded", function () {
 
     // =========================
     // SEARCH + FILTER STATUS
     // =========================
 
     const searchInput = document.getElementById("searchInput");
-    const filterStatus = document.getElementById("filterStatus");
-    const rows = document.querySelectorAll(".table-search tbody tr");
+    const table = document.querySelector(".table-search");
 
-    if (searchInput && filterStatus) {
+    if (!searchInput || !table) return;
 
-        function filterData() {
-            const keyword = searchInput.value.toLowerCase();
-            const statusDipilih = filterStatus.value.toLowerCase();
+    const rows = table.querySelectorAll("tbody tr");
 
-            rows.forEach(function(row) {
+    searchInput.addEventListener("input", function () {
+        const keyword = this.value.toLowerCase().trim();
 
-                const isiBaris = row.innerText.toLowerCase();
-                const status = row.cells[5].innerText.trim().toLowerCase();
-
-                if (
-                    isiBaris.includes(keyword) &&
-                    (statusDipilih === "" || status === statusDipilih)
-                ) {
-                    row.style.display = "";
-                } else {
-                    row.style.display = "none";
-                }
-            });
-        }
-
-        searchInput.addEventListener("keyup", filterData);
-        filterStatus.addEventListener("change", filterData);
-    }
-
+        rows.forEach(row => {
+            const text = row.textContent.toLowerCase();
+            row.style.display = text.includes(keyword) ? "" : "none";
+        });
+    });
 
 // =========================
 // SHOW / HIDE PASSWORD
